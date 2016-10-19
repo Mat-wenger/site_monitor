@@ -11,3 +11,6 @@
     }, 
     height: '40' 
 },
+"Label#header" :{
+	top: '10'
+}
