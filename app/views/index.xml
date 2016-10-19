@@ -1,0 +1,12 @@
+<Alloy>
+	<Collection src="metrics" />
+	<Window class="container" onClose = "cleanup">
+		<TableView dataCollection="metrics" id="metricsTable">
+			<TableViewRow name="{name}" metric_id="{name}">
+				<Label text="{name}" textAlign="left" left="0dp"/>
+				<Label text="{value}"/>
+				<Label text="Update" onClick="catchUpdateMetricEvent" right="0dp" update_metric="{name}"/>
+			</TableViewRow>	
+		</TableView>
+	</Window>
+</Alloy>
