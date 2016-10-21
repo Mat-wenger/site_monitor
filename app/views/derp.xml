@@ -1,0 +1,13 @@
+//in index.xml keep alloy tag
+<Alloy>
+</Alloy>
+
+and then define tow controller (windows) lets say login window & welcome window.
+
+//in index.js you can check if the user has logged in or not
+var wind=null;
+if(logged in ) 
+    wind=Alloy.createController('welcome').getView();
+else
+    wind=Alloy.createController('login').getView();
+wind.open();
