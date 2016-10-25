@@ -1,20 +1,21 @@
 var myMetrics = Alloy.Collections.metrics;
 var url = "http://echo.jsontest.com/key/value/name/Sales ($)/value/10,000";
-/*
+
 var helpStack = require('Helpers/helpStack');
-
-helpers = helpStack.init(['authHelper','ajax', 'hurrdurr']);
+helpStack.debug = true;
+//url = http://localhost:61622/
+helpers = helpStack.init(['auth','ajax', 'hurrdurr']);
 helpers.authHelper.auth();
-*/
-
-var authHelper = require('Helpers/authHelper');
-authHelper.auth();
-var ajaxHelper = require('Helpers/ajax');
 
 //This is running through our network. We can use devnew.arhaus.com to test the ajax request for updating, getting data, etc.
 //TODO: Helper algorithm???
 //var helpers = ['auth', 'ajax', 'table']
-//TODO: Authorization
+//TODO: Authorization (index)
+//TODO: move metric logic/elements to metric.js
+/*
+ * 	var bookview = Alloy.createController("bookdetails", args).getView();
+	bookview.open();
+ */
 //TODO: Sync all button functionality
 //TODO: Plan information/Compare
 //TODO: Hide all ^^^^ when another one is clicked
