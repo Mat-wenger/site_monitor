@@ -12,17 +12,17 @@ exports.init = function(helperStack){
 			helperName += "Helper";	
 		try{
 			if(this.debug)
-				Ti.API.log('Trying to find the helper [[ ' + helperName + ']].');
+				Ti.API.log('Trying to find the helper [[' + helperName + ']].');
 			var tempReturn = require('Helpers/' + helperStack[i]);	
 		}
 		catch(e){
 			try{
 				if(this.debug)
-				Ti.API.log('Trying to find the helper [[ ' + helperName + ']]after adding the word Helper to it.');
+				Ti.API.log('Trying to find the helper [[' + helperName + ']]after adding the word Helper to it.');
 				tempReturn = require('Helpers/' + helperStack[i] + 'Helper');
 			}
 			catch(e){
-				Ti.API.warn('Cannot load helper [[ ' + helperName + ']].');
+				Ti.API.warn('Cannot load helper [[' + helperName + ']].');
 			}
 		}
 	
