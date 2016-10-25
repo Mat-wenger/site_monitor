@@ -1,16 +1,7 @@
 <Alloy>
-	<Collection src="metrics" />
 	<Window class="container" title = "">
 		<Label text="Arhaus Site Monitor (beta)" id = "header" top = "5" borderColor = "red" borderWidth = "1" width = "100%"/>
-		<TableView dataCollection="metrics" id="metricsTable" top = "25">
-			<TableViewRow name="{name}" metric_id="{name}">
-				<Label text="{name}" textAlign="left" left="0dp" define_metric="{name}" onClick = "expandMetric"/>
-				<Label text="{value}" define_metric="{name}" onClick = "expandMetric"/>
-				<Label text="Update" onClick="catchUpdateMetricEvent" right="0dp" update_metric="{name}"/>
-			</TableViewRow>	
-		</TableView>
-		<Menu platform = "android">
-			<MenuItem id = "update" title = "Sync" onClick = "updateAllMetrics" showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM" icon = ""/>
-		</Menu>
+		<Label text="Log In" onClick = 'signIn'/>
 	</Window>
+
 </Alloy>

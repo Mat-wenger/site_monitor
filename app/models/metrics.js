@@ -20,6 +20,13 @@ exports.definition = {
 	},
 	extendCollection: function(Collection) {
 		_.extend(Collection.prototype, {
+			remove: function(){
+				Ti.API.warn('remove the collection here');
+				var db=Ti.Database.open('_alloy_');
+				var deleteRecords=db.execute('DELETE FROM metrics');
+				Ti.API.info('Affected Rows    '+db.getRowsAffected());
+				db.close();
+				}
 			// extended functions and properties go here
 
 			// For Backbone v1.1.2, uncomment the following to override the
